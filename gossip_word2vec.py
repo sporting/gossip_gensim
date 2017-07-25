@@ -3,10 +3,10 @@ import logging
 
 def main():
     logging.basicConfig(format='%(asctime)s:%(levelname)s:%(message)s',level=logging.INFO)
-    sentences = word2vec.Text8Corpus("jieba_extract.txt")
+    sentences = word2vec.Text8Corpus("./output/jieba_extract.txt")
     model = word2vec.Word2Vec(sentences, size=250)
 
-    model.save("med250.model.bin")
+    model.save("./models/med250.model.bin")
 
 if __name__ == "__main__":
     main()
